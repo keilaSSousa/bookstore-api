@@ -40,5 +40,12 @@ public class CategoriaService {
 		categoria .setDescricao(categoria.getDescrição());
 		return this.categoriaRepository.save(categoria);
 	}
+	
+	public void deleteCategoria(Integer id) {
+		
+		this.findById(id);
+		categoriaRepository.deleteById(id);
+		
+	}
 
 }
