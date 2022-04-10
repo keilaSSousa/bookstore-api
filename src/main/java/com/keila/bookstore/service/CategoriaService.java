@@ -26,5 +26,10 @@ public class CategoriaService {
 	public List<Categoria> findAll(){
 		return this.categoriaRepository.findAll();
 	}
+	
+	public Categoria inserirCategoria(Categoria categoria) {
+		categoria.setId(null);
+		return this.categoriaRepository.save(categoria);
+	}
 
 }

@@ -19,16 +19,16 @@ public class Categoria implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String nome;
-	private String descrição;
+	private String descricao;
 	// uma categoria pode ter 0 ou * livros
 	@OneToMany(mappedBy = "categoria" )
 	private List<Livro> livros = new ArrayList<>();
 
-	public Categoria(Integer id, String nome, String descrição) {
+	public Categoria(Integer id, String nome, String descricao) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.descrição = descrição;
+		this.descricao = descricao;
 	}
 
 	public Categoria() {
@@ -52,11 +52,11 @@ public class Categoria implements Serializable {
 	}
 
 	public String getDescrição() {
-		return descrição;
+		return descricao;
 	}
 
-	public void setDescrição(String descrição) {
-		this.descrição = descrição;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 	public List<Livro> getLivros() {
