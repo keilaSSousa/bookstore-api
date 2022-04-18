@@ -53,6 +53,12 @@ public class LivroService {
 		obj.setCategoria(cat);
 		return this.livroRepository.save(obj);
 	}
+
+	public void delete(Integer id) {
+		Livro obj = this.findById(id);
+		this.livroRepository.delete(obj);
+		
+	}
 	
 
 }
